@@ -9,7 +9,7 @@ cd $WORK_DIR
 wget https://releases.linaro.org/components/toolchain/binaries/7.5-2019.12/arm-linux-gnueabihf/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf.tar.xz
 tar -xf gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf.tar.xz
 
-mv gcc* gcc
+mv gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf gcc
 rm *.xz
 
 CC=gcc/bin/arm-linux-gnueabihf-gcc
@@ -20,8 +20,8 @@ mkdir -p llvm-project/bhost
 mkdir -p llvm-project/build
 
 cd llvm-project/bhost
-cmake -G Ninja ./llvm -DCMAKE_BUILD_TYPE=Release -DLLVM_TARGETS_TO_BUILD="ARM;X86" -DLLVM_ENABLE_PROJECTS="lld;clang;compiler-rt"
-ninja -j4
+cmake -G Ninja ../llvm -DCMAKE_BUILD_TYPE=Release -DLLVM_TARGETS_TO_BUILD="ARM;X86" -DLLVM_ENABLE_PROJECTS="lld;clang;compiler-rt"
+ninja clang-tblgen llvm-tblgen
 
 echo $GITHUB_WORKSPACE
 
