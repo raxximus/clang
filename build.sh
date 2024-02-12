@@ -8,8 +8,8 @@ tar -xf gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf.tar.xz
 mv gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf gcc
 rm *.xz
 
-CC=gcc/bin/arm-linux-gnueabihf-gcc
-CXX=gcc/bin/arm-linux-gnueabihf-g++
+CC=$WORK_DIR/gcc/bin/arm-linux-gnueabihf-gcc
+CXX=$WORK_DIR/gcc/bin/arm-linux-gnueabihf-g++
 
 git clone https://github.com/llvm/llvm-project --depth 1 -b release/15.x
 mkdir -p llvm-project/bhost
