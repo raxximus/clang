@@ -1,4 +1,11 @@
 #!/usr/bin/env bash
+WORK_DIR=$GITHUB_WORKSPACE
+
+apt update
+yes | apt upgrade
+apt install ninja-build
+
+cd $WORK_DIR
 wget https://releases.linaro.org/components/toolchain/binaries/7.5-2019.12/arm-linux-gnueabihf/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf.tar.xz
 tar -xf gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf.tar.xz
 
