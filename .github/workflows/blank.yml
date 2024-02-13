@@ -35,6 +35,6 @@ jobs:
          repo_token: ${{ secrets.GITHUB_TOKEN }}
          file: test
          asset_name: clang-arm.tar
-         tag: ${{ github.ref }}
+         tag: "LLVM/Clang 17"
          overwrite: true
-         body: "LLVM/Clang 17"
+         body: "LLVM/Clang 17 for arm linux host"
