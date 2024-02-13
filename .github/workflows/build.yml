@@ -26,7 +26,8 @@ jobs:
         run: |
          sudo apt-get install -y clang ninja-build
         shell: bash
-      - name: Build
+      - name: Build and Upload
+        env:
+              GH_TOKEN: ${{ github.token }}
         run: |
          chmod +x ./build.sh
-         ./build.sh
