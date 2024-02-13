@@ -30,9 +30,3 @@ jobs:
         run: |
          chmod +x ./build.sh
          ./build.sh
-        shell: bash
-      - name: Upload
-        uses: actions/upload-artifact@v2
-        with: 
-          name: clang-arm
-          path: arm.tar
