@@ -30,6 +30,7 @@ jobs:
         shell: bash
 
       # Runs a set of commands using the runners shell
+      - name: 
       - uses: xresloader/upload-to-github-release@v1
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -38,3 +39,4 @@ jobs:
             tags: true
             default_release_name: "LLVM/Clang 17"
             default_release_body: "LLVM/Clang 17 for arm linux"
+            tags: true
