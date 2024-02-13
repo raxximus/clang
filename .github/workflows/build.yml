@@ -31,3 +31,4 @@ jobs:
               GH_TOKEN: ${{ github.token }}
         run: |
          chmod +x ./build.sh
+         ./build.sh
