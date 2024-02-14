@@ -3,12 +3,12 @@ WORK_DIR=$GITHUB_WORKSPACE
 VERSION=17
 
 cd $WORK_DIR
-wget https://releases.linaro.org/components/toolchain/binaries/latest-7/arm-linux-gnueabihf/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf.tar.xz 
+wget https://snapshots.linaro.org/gnu-toolchain/12.3-2023.06-1/arm-linux-gnueabihf/gcc-linaro-12.3.1-2023.06-x86_64_arm-linux-gnueabihf.tar.xz
 tar -xf *.xz
 rm *.xz
 
-CC=$WORK_DIR/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc
-CXX=$WORK_DIR/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-g++
+CC=$WORK_DIR/gcc-linaro-12.3.1-2023.06-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc
+CXX=$WORK_DIR/gcc-linaro-12.3.1-2023.06-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-g++
 
 git clone https://github.com/llvm/llvm-project --depth 1 -b release/$VERSION.x
 mkdir -p llvm-project/bhost
