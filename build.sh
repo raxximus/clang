@@ -5,10 +5,12 @@ VERSION=17
 cd $WORK_DIR
 wget https://github.com/Valium007/gcc-for-arm/releases/download/v13.2.0/arm-cross.tar
 tar -xf arm-cross.tar
-rm *.xz
+rm *.tar
 
-CC=$WORK_DIR/arm-cross/bin/arm-linux-gnueabihf-gcc
-CXX=$WORK_DIR/arm-cross/bin/arm-linux-gnueabihf-g++
+sudo mv arm-cross /opt/
+
+CC=/opt/arm-cross/bin/arm-linux-gnueabihf-gcc
+CXX=/opt/arm-cross/bin/arm-linux-gnueabihf-g++
 
 git clone https://github.com/llvm/llvm-project --depth 1 -b release/$VERSION.x
 mkdir -p llvm-project/bhost
