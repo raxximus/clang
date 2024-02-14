@@ -3,12 +3,12 @@ WORK_DIR=$GITHUB_WORKSPACE
 VERSION=17
 
 cd $WORK_DIR
-wget https://releases.linaro.org/components/toolchain/binaries/latest-7/arm-linux-gnueabihf/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf.tar.xz 
-tar -xf *.xz
+wget https://github.com/Valium007/gcc-for-arm/releases/download/v13.2.0-linaro/gcc-arm.tar
+tar -xf *.tar
 rm *.tar
 
-CC=$WORK_DIR/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc
-CXX=$WORK_DIR/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-g++
+CC=$WORK_DIR/gcc-arm/bin/arm-linux-gnueabihf-gcc
+CXX=$WORK_DIR/gcc-arm/bin/arm-linux-gnueabihf-g++
 
 git clone https://github.com/llvm/llvm-project --depth 1 -b release/$VERSION.x
 mkdir -p llvm-project/bhost
@@ -24,4 +24,4 @@ ninja -j4 && ninja install
 
 cd $WORK_DIR
 tar --xz -cf clang-arm.tar clang-arm/
-gh release create v$VERSION clang-arm.tar -R valium007/clang -t "LLVM/Clang $VERSION" -n "LLVM/Clang $VERSION for arm linux"
+gh release create v$VERSION.1 clang-arm.tar -R valium007/clang -t "LLVM/Clang $VERSION.1" -n "LLVM/Clang $VERSION.1 for arm linux"
