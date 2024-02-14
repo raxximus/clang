@@ -7,8 +7,11 @@ wget https://github.com/Valium007/gcc-for-arm/releases/download/v13.2.0-linaro/g
 tar -xf *.tar
 rm *.tar
 
-CC=$WORK_DIR/gcc-arm/bin/arm-linux-gnueabihf-gcc
-CXX=$WORK_DIR/gcc-arm/bin/arm-linux-gnueabihf-g++
+sudo mv gcc-arm arm-cross
+sudo mv arm-cross /opt/
+
+CC=/opt/arm-cross/bin/arm-linux-gnueabihf-gcc
+CXX=/opt/arm-cross/bin/arm-linux-gnueabihf-g++
 
 git clone https://github.com/llvm/llvm-project --depth 1 -b release/$VERSION.x
 mkdir -p llvm-project/bhost
