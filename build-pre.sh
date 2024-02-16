@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 WORK_DIR=$GITHUB_WORKSPACE
-VERSION=17
+VERSION=17.2
 
 cd $WORK_DIR
 wget https://snapshots.linaro.org/gnu-toolchain/12.3-2023.06-1/arm-linux-gnueabihf/gcc-linaro-12.3.1-2023.06-x86_64_arm-linux-gnueabihf.tar.xz
