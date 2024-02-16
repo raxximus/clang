@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 WORK_DIR=$GITHUB_WORKSPACE
-VERSION=17.2
+VERSION=17
 
 cd $WORK_DIR
 wget https://snapshots.linaro.org/gnu-toolchain/12.3-2023.06-1/arm-linux-gnueabihf/gcc-linaro-12.3.1-2023.06-x86_64_arm-linux-gnueabihf.tar.xz
@@ -24,4 +24,4 @@ ninja -j4 && ninja install
 
 cd $WORK_DIR
 tar --xz -cf clang-arm.tar clang-arm/
-gh release create v$VERSION clang-arm.tar -R valium007/clang -t "LLVM/Clang $VERSION with libc++" -n "LLVM/Clang $VERSION for arm linux" -p
+gh release create v$VERSION.2 clang-arm.tar -R valium007/clang -t "LLVM/Clang $VERSION.2 with libc++" -n "LLVM/Clang $VERSION.2 for arm linux" -p
