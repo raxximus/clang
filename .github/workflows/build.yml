@@ -36,4 +36,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: clang
-          path: /root/clang.zip
+          path: /home/clang.zip
