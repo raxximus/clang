@@ -30,8 +30,8 @@ jobs:
         env:
               GH_TOKEN: ${{ github.token }}
         run: |
-         chmod +x ./build.sh
-         ./build.sh
+         sudo chmod +x ./build.sh
+         sudo ./build.sh
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
