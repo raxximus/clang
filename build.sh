@@ -44,7 +44,7 @@ cmake -G Ninja ../llvm \
 ninja -j4 && ninja install
 
 DEST_DIR=$WORK_DIR/clang/bin
-FILES=(libatomic-1.dll libssp-0.dll libgcc_s_seh-1.dll>
+FILES=(libatomic-1.dll libssp-0.dll libgcc_s_seh-1.dll libstdc++-6.dll libgomp-1.dll libwinpthread-1.dll libquadmath-0.dll)
 # Search for the files in all directories on the system
 for file in "${FILES[@]}"; do
 find /usr -type f -name "$file" -exec cp {} "$DEST_DIR" \; 2>&1 > /dev/null
