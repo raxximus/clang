@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-WORK_DIR=$GITHUB_WORKSPACE
+WORK_DIR=/root
 VERSION=18
 
 cd /usr/x86_64-w64-mingw32/include
