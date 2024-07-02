@@ -53,4 +53,3 @@ done
 
 cd $WORK_DIR
 zip -r clang.zip clang
-gh release create $VERSION clang.zip -R raxximus/clang -t "LLVM/Clang $VERSION" -n "LLVM/Clang $VERSION" -p
