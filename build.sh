@@ -24,7 +24,7 @@ cmake -G Ninja ../llvm \
 -DCMAKE_C_COMPILER=x86_64-w64-mingw32-gcc-posix \
 -DCMAKE_CXX_COMPILER=x86_64-w64-mingw32-g++-posix \
 -DLLVM_ENABLE_PIC=ON \
--DLLVM_ENABLE_PROJECTS="lld;clang;compiler-rt" \
+-DLLVM_ENABLE_PROJECTS="lld;clang" \
 -DLLVM_TABLEGEN=$WORK_DIR/llvm-project/bhost/bin/llvm-tblgen \
 -DCLANG_TABLEGEN=$WORK_DIR/llvm-project/bhost/bin/clang-tblgen \
 -DLLVM_PARALLEL_LINK_JOBS=1 \
