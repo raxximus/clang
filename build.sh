@@ -18,12 +18,13 @@ cd $WORK_DIR/llvm-project/build
 cmake -G Ninja ../llvm \
 -DCMAKE_BUILD_TYPE=Release \
 -DLLVM_TARGETS_TO_BUILD="ARM;AArch64;X86" \
+-DCLANG_DEFAULT_RTLIB=compiler-rt \
 -DLLVM_DEFAULT_TARGET_TRIPLE=arm-linux-musleabihf \
 -DLLVM_TARGET_ARCH=ARM \
 -DCMAKE_C_COMPILER=x86_64-w64-mingw32-gcc-posix \
 -DCMAKE_CXX_COMPILER=x86_64-w64-mingw32-g++-posix \
 -DLLVM_ENABLE_PIC=ON \
--DLLVM_ENABLE_PROJECTS="lld;clang" \
+-DLLVM_ENABLE_PROJECTS="lld;clang;compiler-rt" \
 -DLLVM_TABLEGEN=$WORK_DIR/llvm-project/bhost/bin/llvm-tblgen \
 -DCLANG_TABLEGEN=$WORK_DIR/llvm-project/bhost/bin/clang-tblgen \
 -DLLVM_PARALLEL_LINK_JOBS=1 \
