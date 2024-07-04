@@ -14,10 +14,14 @@ jobs:
       - name: Build
         run: |
          sudo apt-get install -y mingw-w64
-         x86_64-w64-mingw32-gcc-posix thread.c -o thread.exe
-         sudo cp thread.exe /home
+         sudo chmod +x copy-dlls.sh
+         x86_64-w64-mingw32-gcc-posix thread.c -o thread.exe 
+         sudo mkdir /home/test
+         sudo cp thread.exe /home/test
+         sudo ./copy-dlls.sh /home/test
+
       - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: test binary
-          path: /home/thread.exe
+          path: /home/test
