@@ -26,11 +26,10 @@ jobs:
         run: |
          sudo apt-get install -y clang ninja-build mingw-w64
         shell: bash
-      - name: Build and Upload
-        env:
-              GH_TOKEN: ${{ github.token }}
+      - name: Build
         run: |
          sudo chmod +x ./build.sh
+         sudo cp afunix.h /usr/x86_64-w64-mingw32/include
          sudo ./build.sh
       - name: Upload Artifact
         uses: actions/upload-artifact@v3

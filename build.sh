@@ -2,8 +2,6 @@
 WORK_DIR=/root
 VERSION=18
 
-cd /usr/x86_64-w64-mingw32/include
-curl -O https://gist.githubusercontent.com/NZSmartie/079d8f894ee94f3035306cb23d49addc/raw/550bebfd895fa5cf4d8bfdc360161d85c0deedf1/afunix.h
 cd $WORK_DIR
 
 git clone https://github.com/llvm/llvm-project --depth 1 -b release/$VERSION.x
