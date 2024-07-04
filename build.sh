@@ -9,7 +9,7 @@ mkdir -p llvm-project/bhost
 mkdir -p llvm-project/build
 
 cd llvm-project/bhost
-cmake -G Ninja ../llvm -DCMAKE_BUILD_TYPE=Release -DLLVM_TARGETS_TO_BUILD="X86" -DLLVM_ENABLE_PROJECTS="lld;clang;compiler-rt"
+cmake -G Ninja ../llvm -DCMAKE_BUILD_TYPE=Release -DLLVM_TARGETS_TO_BUILD="X86" -DLLVM_ENABLE_PROJECTS="lld;clang"
 ninja clang-tblgen llvm-tblgen
 
 cd $WORK_DIR/llvm-project/build
