@@ -1,5 +1,5 @@
 
-name: Build Clang for musl (no sysroot)
+name: Test workflow
 
 on:
   workflow_dispatch:
