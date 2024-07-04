@@ -18,7 +18,7 @@ jobs:
       - name: Build
         run: |
          x86_64-w64-mingw32-gcc-posix thread.c -o thread.exe
-         cp thread.exe /home
+         sudo cp thread.exe /home
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
