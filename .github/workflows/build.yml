@@ -24,8 +24,12 @@ jobs:
         uses: jwlawson/actions-setup-cmake@v1.14
       - name: Install tools
         run: |
-         sudo apt-get install -y clang ninja-build mingw-w64
+         sudo apt-get install -y clang ninja-build
         shell: bash
+      - name: Set up MinGW
+        uses: egor-tensin/setup-mingw@v2
+        with:
+            platform: x64
       - name: Build
         run: |
          sudo chmod +x ./build.sh
