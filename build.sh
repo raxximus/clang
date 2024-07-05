@@ -52,4 +52,4 @@ done
 
 cd $WORK_DIR
 zip -r clang.zip clang
-cp clang.zip /home/
+cp clang.zip /home
