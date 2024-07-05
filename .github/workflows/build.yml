@@ -11,12 +11,14 @@ jobs:
         run: |
          sudo apt-get install -y ninja-build mingw-w64
         shell: bash
-      - name: List mingw
+      - name: Build
         run: |
-          ls /lib/gcc/x86_64-w64-mingw32/*posix
+         sudo chmod +x ./build.sh
+         sudo cp afunix.h /usr/x86_64-w64-mingw32/include
+         sudo ./build.sh
         shell: bash
-#      - name: Upload Artifact
-#        uses: actions/upload-artifact@v4
-#        with:
-#          name: clang
-#          path: /home/clang.zip
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: clang
+          path: /home/clang.zip
