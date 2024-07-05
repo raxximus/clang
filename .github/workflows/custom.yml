@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: List mingw
         run: |
-         ls /lib/gcc/x86_64-w64-mingw32/*posix
+         which x86_64-w64-mingw32-gcc-posix
 #      - name: Upload Artifact
 #        uses: actions/upload-artifact@v4
 #        with:
