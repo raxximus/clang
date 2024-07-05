@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
+#include <iostream>
 
 // Function to be executed by threads
 void* print_message_function(void* ptr) {
     char* message;
     message = (char*) ptr;
-    printf("%s\n", message);
+    std::cout << message << std::endl;
     return NULL;
 }
 
