@@ -1,4 +1,4 @@
-/*++
+/*
 
 Copyright (c) Microsoft Corporation
 
@@ -13,7 +13,7 @@ Abstract:
 
     BETA: The definitions in this header are subject to change.
 
---*/
+*/
 
 #ifndef _AFUNIX_
 #define _AFUNIX_
