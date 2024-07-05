@@ -12,6 +12,7 @@ jobs:
       - name: List mingw
         run: |
          which x86_64-w64-mingw32-gcc-posix
+        shell: bash
 #      - name: Upload Artifact
 #        uses: actions/upload-artifact@v4
 #        with:
